@@ -1,0 +1,93 @@
+body {
+  background-color: aliceblue;
+}
+
+#container {
+  width: 600px;
+  height: 250px;
+  position: relative;
+  border-bottom: 3px solid #422a14;
+  overflow: hidden;
+  /*task 1*/
+  /*please research what is overflow and why do we need to use it here.*/
+}
+
+#car {
+  width: 20%;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  z-index: 1;
+}
+
+@keyframes mountain {
+  to {
+    transform: translateX(-1000px);
+    /*what is the attribute that need to fill in, if we want it to move horizontally (x and y, x is horizontal)*/
+  }
+}
+
+#mountain {
+  width: 40%;
+  position: absolute;
+  right: -50%;
+  bottom: -20%;
+
+  animation-name: mountain;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+
+  /*	task 3
+	please fill in the animation name
+	task 4*/
+  /*we want it run for 10 seconds and keep looping. in terms of speed, just average. */
+}
+
+/*task5: give it a name*/
+@keyframes grass {
+  from {
+    right: -100px;
+  }
+  to {
+    right: 2000px;
+  }
+}
+/* it should come from the right to the left */
+
+#grass {
+  width: 5%;
+  position: absolute;
+  bottom: -1%;
+  z-index: 2;
+
+  animation-name: grass;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  /*task 6: please fill in the appropriate animation setting;*/
+}
+
+@keyframes tree {
+  /*task 7: same for the mountain*/
+  /* from {
+    right: -50px;
+  } */
+  to {
+    right: 2000px;
+  }
+}
+
+#tree {
+  width: 15%;
+  bottom: 0;
+  right: -30%;
+  position: absolute;
+
+  animation-name: tree;
+  animation-delay: 2s;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+
+  /*please fill in the appropriate setting
+	Also i want it to start 2 seconds after the animation starts.*/
+}
